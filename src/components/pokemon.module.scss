@@ -1,0 +1,106 @@
+
+.collectionContainer {
+    color:#3d405b;
+    margin-top: 2rem;
+    font-weight: 600;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.collectionContainerActive{
+    color:#3d405b;
+    margin-top: 2rem;
+    font-weight: 600;
+    overflow-y: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.overlay{
+    width:100vw;
+    height: 100vh;
+}
+.detailContainer {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.detailName{
+    font-size: 1.5rem;
+    color:#3d405b;
+    font-weight: 700;
+}
+.detailInfo {
+    background-color: #f2cc8f;
+    background-image: linear-gradient(0deg, #f2cc8f 0%, #f8f3d9 100%);
+        width: 100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.detailAbitlity{
+    color: #3d405b;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+.detailSkill {
+    align-self: flex-start;
+    flex-wrap: wrap;
+    display: flex;
+    gap:0.5rem;
+    margin: 1rem;
+    text-align: start;
+}
+.detailClose{ 
+    cursor: pointer;
+    margin: 1rem 1rem 0 auto;
+    font-size: 1.5rem;
+}
+.pokemonName {
+    margin-top: 0.5rem;
+}
+.pokemonListContainer{
+    display: flex;
+    cursor:pointer;
+    flex-direction: column;
+    background-color: #f4f1de;
+    margin:1rem;
+    padding: 0 1rem;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemonListDetailed {
+    background-color: #f4f1de;
+    position: absolute;
+    text-align:center;
+    width: 300px;
+    height: 300px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #81b29a;
+    color:#3d405b;
+    padding:0.5rem;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    border:none;
+    transition: 200ms ease-in-out;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #61997e;
+    color:#3d405b;
+    padding:0.5rem;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    border:none;}
