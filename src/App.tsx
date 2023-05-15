@@ -7,7 +7,7 @@ import { Pokemon, Pokemons, Detail } from './inteface'
 
 
 const App:React.FC = () => {
-  const  [pokemons, setPokemons ] = useState<Pokemon[]>([])
+  const [pokemons, setPokemons ] = useState<Pokemon[]>([])
   const [nextURL, setNextURL] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(true)
   const [viewDetail, setViewDetail] = useState<Detail>({
@@ -17,6 +17,7 @@ const App:React.FC = () => {
 
   useEffect(() => {
     const getPokemon = async () => {
+      setLoading(true)
       // Lấy 20 con pokemon {name, url}
       const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=20&offset=0")
       // Set URL của next data khi ấn nút "Load more"
@@ -49,7 +50,13 @@ const App:React.FC = () => {
     })
   }
   
-
+  if (loading) {
+    return (
+      <div className={styles.loading}>
+        <div className={styles.ldsDefault}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
+    )
+  }
   return (
     <div className='main'>
       <div className={viewDetail.isOpen ? styles.containerOverlay : styles.container}>
